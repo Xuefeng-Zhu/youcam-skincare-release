@@ -1,0 +1,14 @@
+{
+  "name": "youcam-skincare-prototype",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Local skincare observation and source-backed label-checking prototype",
+  "engines": {
+    "node": "24.x"
+  },
+  "scripts": {
+    "start": "node --env-file-if-exists=.env server.mjs",
+    "test": "node --test"
+  }
+}

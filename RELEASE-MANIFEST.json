@@ -1,0 +1,177 @@
+{
+  "format": 1,
+  "prepared_date": "2026-10-26",
+  "license": "MIT",
+  "copyright_holder": "Xuefeng Zhu",
+  "checks": {
+    "application_tests": "96 passed, 0 failed in this clean tree",
+    "relative_links": "passed",
+    "manifest_hashes": "passed",
+    "private_path_and_asset_exclusions": "passed",
+    "independent_read_only_review": "passed",
+    "development_application_sources": "unchanged",
+    "final_learner_readiness": "not confirmed"
+  },
+  "files": [
+    {
+      "path": ".env.example",
+      "sha256": "bf119d0bbe63562cee7d591f191bf42fd6125f5fff60f69ec32015f375ea4581",
+      "bytes": 47
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "728d7c0e354c2295d1be5f4afeaf3a135339c9862e8f5cb3143089d3563daa79",
+      "bytes": 110
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "3f085091f2b41f4e45bb9d86513e339ed3de769a68d99db2f1a21a6c83cc0b7d",
+      "bytes": 1068
+    },
+    {
+      "path": "README.md",
+      "sha256": "467ee25fbcc643b88db6ca036fe96d0df6945b098a3fc0b74628e754a49d03a1",
+      "bytes": 4676
+    },
+    {
+      "path": "devpost/app-map.html",
+      "sha256": "40ffdbdbc30a6ec1d298b63bd9ab97cc4e9ab96991e048fea7150c8342ccc8b5",
+      "bytes": 8676
+    },
+    {
+      "path": "devpost/catalog-evidence.md",
+      "sha256": "6679572746f1c185c9497d9e7eedb965fba385c634b4811da4d69f61066966fe",
+      "bytes": 3453
+    },
+    {
+      "path": "devpost/checklist.md",
+      "sha256": "cc47ff013c5de35c086210807f0c5e81d434ad0c65d7d0e755717efd089599a3",
+      "bytes": 10373
+    },
+    {
+      "path": "devpost/consultation-delta.md",
+      "sha256": "b27dfec017325a5a1e59ba94cff1b297de32f367c5eb57296c12a27d598102a2",
+      "bytes": 8674
+    },
+    {
+      "path": "devpost/consultation-journey.md",
+      "sha256": "09e5a5092d75c952eaf987c8e2283af0de90aaa5f7b6bbf12f9d1a36c204247a",
+      "bytes": 3705
+    },
+    {
+      "path": "devpost/prd.md",
+      "sha256": "a015152bf64752fbba8b47424cf7dae2faa1382e27414104dc402e3f201d8642",
+      "bytes": 12249
+    },
+    {
+      "path": "devpost/product-evidence.md",
+      "sha256": "4e8ef8ee7774d755ad8672d3efdf440268db4ae9e0d273983fc5ee19a78f5fc1",
+      "bytes": 7270
+    },
+    {
+      "path": "devpost/provider-integration.md",
+      "sha256": "88926869740ecffa055d1cda7256b9a7245bc4fa7952b0afc0491e8d1053eee8",
+      "bytes": 2825
+    },
+    {
+      "path": "devpost/scope.md",
+      "sha256": "66f81c43e420a39cab597f0e2103f3603c5648f1c19a29e124e5414f0ae246ec",
+      "bytes": 6944
+    },
+    {
+      "path": "devpost/spec.md",
+      "sha256": "cb702b0d25af8cfae04f4aad9bb8d8b4564c38162815f150ba72808ec4a9c328",
+      "bytes": 21919
+    },
+    {
+      "path": "devpost/verification.md",
+      "sha256": "079b30ea781bb264a663bb34e0d045baf749c361fcee0cf5d63c310adddfee38",
+      "bytes": 3086
+    },
+    {
+      "path": "lib/request-policy.mjs",
+      "sha256": "207c326de91dbd0af16faf7544202f033bed5751048560e7cb7dbcd1181f2a3f",
+      "bytes": 5306
+    },
+    {
+      "path": "lib/youcam.mjs",
+      "sha256": "422d4a3513196bd6e54c01ad333fe90889f272e7107c22d9bb486e4874fd3cf9",
+      "bytes": 12543
+    },
+    {
+      "path": "package.json",
+      "sha256": "cdd63e54ebfc5ba3f8deac550121e64a86b2e7931f36cdd90b048576c545fe8c",
+      "bytes": 336
+    },
+    {
+      "path": "public/app.mjs",
+      "sha256": "186e02ddaa40e9a3b838801ca4d6f5174e64d71cb9fd5c23e8b6e4b2b6d5ca12",
+      "bytes": 7138
+    },
+    {
+      "path": "public/catalog.json",
+      "sha256": "561ac64da743bcb2b08cdba223fabdb631bf3b21899b6042d90a838a62c8bcde",
+      "bytes": 3544
+    },
+    {
+      "path": "public/consultation-ui.mjs",
+      "sha256": "0d1ca6ff2fcf345c103426f2ed86830cfd73db58055edef9ad71e388160230ea",
+      "bytes": 9837
+    },
+    {
+      "path": "public/consultation.mjs",
+      "sha256": "600c07843201265633c311d8fc4989ca007fe7c9ecd790653c62c789aac2f7e2",
+      "bytes": 2053
+    },
+    {
+      "path": "public/guidance.json",
+      "sha256": "fd1d34f500d7904e5cb92b095ba28716b568255bcd3fd681ebb191dc68881f3e",
+      "bytes": 3187
+    },
+    {
+      "path": "public/index.html",
+      "sha256": "1ddd4ce256b09cfdbd73c41d16b0691d9067cb27299c7daae0a63db3039e7097",
+      "bytes": 15619
+    },
+    {
+      "path": "public/label-check.mjs",
+      "sha256": "191faf14f8d3ea6d66b237fa24600ce9ddbca80f70323b3666f33cb2873f1ac7",
+      "bytes": 5253
+    },
+    {
+      "path": "public/observation-ui.mjs",
+      "sha256": "5bbf640a8adb4805a556bd64d5bbdd84db235d9b62a636c11d2751998f534339",
+      "bytes": 17240
+    },
+    {
+      "path": "public/styles.css",
+      "sha256": "add37b1c64e90c2cdea4a22852fab0bd96a5e2497e67851d70e7e0cd4c906bc0",
+      "bytes": 16467
+    },
+    {
+      "path": "server.mjs",
+      "sha256": "f19fc91d332be242c767a41fd17778be66d138c6aa5502cd57527a336f763210",
+      "bytes": 12876
+    },
+    {
+      "path": "test/consultation.test.mjs",
+      "sha256": "7bda52de420a487e6bae77d60c14bb8cdf508e52e26f548f525dfe35b2133192",
+      "bytes": 7604
+    },
+    {
+      "path": "test/label-check.test.mjs",
+      "sha256": "6d681df28a6b6edc4b7ebbb4318cc86e6f107418d107ab1ebe970015682d3b67",
+      "bytes": 7836
+    },
+    {
+      "path": "test/server.test.mjs",
+      "sha256": "56662f460fe18a88ec6b8c1f57f5df8e78d45d294b7b9302a783be7773646a77",
+      "bytes": 19429
+    },
+    {
+      "path": "test/youcam.test.mjs",
+      "sha256": "15ec4bc465b21731798ae6836a490992e5989059fdac2de8d7868fe4b933a7c5",
+      "bytes": 14218
+    }
+  ]
+}

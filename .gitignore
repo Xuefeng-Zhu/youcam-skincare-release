@@ -1,0 +1,10 @@
+.env
+.env.*
+!.env.example
+node_modules/
+output/
+video/
+.DS_Store
+.agents/
+.codex/
+/devpost/learner-profile.md

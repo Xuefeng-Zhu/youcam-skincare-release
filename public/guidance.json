@@ -1,0 +1,68 @@
+{
+  "version": "2026-10-26",
+  "reviewedAt": "2026-10-26",
+  "sources": [
+    {
+      "id": "aad-dry-skin",
+      "title": "AAD: Dermatologists' top tips for relieving dry skin",
+      "url": "https://www.aad.org/public/everyday-care/skin-care-basics/dry/dermatologists-tips-relieve-dry-skin"
+    },
+    {
+      "id": "aad-rash",
+      "title": "AAD: Rash 101 in adults — when to seek medical treatment",
+      "url": "https://www.aad.org/public/everyday-care/itchy-skin/rash/rash-101"
+    },
+    {
+      "id": "fda-allergens",
+      "title": "FDA: Allergens in Cosmetics",
+      "url": "https://www.fda.gov/cosmetics/cosmetic-ingredients/allergens-cosmetics"
+    },
+    {
+      "id": "nhs-anaphylaxis",
+      "title": "NHS: Anaphylaxis",
+      "url": "https://www.nhs.uk/conditions/anaphylaxis/"
+    }
+  ],
+  "education": [
+    {
+      "id": "gentle-cleansing",
+      "title": "Choose gentle cleansing",
+      "body": "Consider a gentle, fragrance-free cleanser. Use enough to clean without building a thick lather. Fragrance-free labeling does not guarantee that you will tolerate a product.",
+      "sourceIds": ["aad-dry-skin", "fda-allergens"]
+    },
+    {
+      "id": "warm-washing",
+      "title": "Keep washing warm and short",
+      "body": "Keep baths and showers short, about 5–10 minutes, using warm rather than hot water. Gently pat skin dry instead of rubbing.",
+      "sourceIds": ["aad-dry-skin"]
+    },
+    {
+      "id": "moisturize-damp",
+      "title": "Moisturize while skin is damp",
+      "body": "Apply moisturizer while your skin is still damp after washing. Creams or ointments are general options for dry-feeling skin; a product's ingredients do not guarantee personal tolerance.",
+      "sourceIds": ["aad-dry-skin", "fda-allergens"]
+    }
+  ],
+  "care": {
+    "emergency": {
+      "title": "Get emergency help now",
+      "body": "Use your local emergency number now — 911 in the United States. Do not wait for a skin photo, cosmetic score, or product check. This app cannot assess an emergency.",
+      "sourceIds": ["fda-allergens", "aad-rash", "nhs-anaphylaxis"]
+    },
+    "review": {
+      "title": "Seek medical evaluation",
+      "body": "A clinician should assess the concern you reported. A cosmetic scan or product label cannot determine the cause. Persistent dryness despite gentle care, or burning or stinging from applied products, also warrants clinician advice.",
+      "sourceIds": ["aad-rash", "aad-dry-skin", "fda-allergens"]
+    },
+    "unknown": {
+      "title": "Some information is still unknown",
+      "body": "Some warning-sign answers are missing or uncertain. This is not medical clearance. You can review general information and seek medical advice if concerned. A cosmetic score cannot resolve these unanswered questions.",
+      "sourceIds": ["aad-rash", "fda-allergens"]
+    },
+    "unsupported": {
+      "title": "Choose the supported concern",
+      "body": "This guide provides educational information for dry-feeling skin. Choose that concern to continue, or consult a qualified clinician for a medical concern. This app cannot diagnose another condition.",
+      "sourceIds": ["aad-dry-skin", "aad-rash"]
+    }
+  }
+}

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Application map — technical reference</title>
+<style>
+:root{font-family:ui-sans-serif,system-ui,sans-serif;color:#282824;background:#f7f3eb;line-height:1.65}*{box-sizing:border-box}body{margin:0}main{max-width:1000px;margin:auto;padding:48px 24px 70px}.eyebrow{font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:#805344;font-weight:700}h1,h2,h3{line-height:1.15}h1{font-family:Georgia,serif;font-size:clamp(2.3rem,6vw,4.5rem);font-weight:400;max-width:750px;margin:.35em 0}h2{font-family:Georgia,serif;font-weight:400;font-size:2rem;margin:2.1em 0 .6em}h3{font-size:1.05rem}p{max-width:76ch}a{color:#754c3e;text-underline-offset:.2em}a:focus-visible,summary:focus-visible{outline:3px solid #9e5b43;outline-offset:5px}code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.88em;overflow-wrap:anywhere;background:#eee7dc;padding:.12em .3em;border-radius:3px}.note{border-left:3px solid #a6684e;padding:10px 18px;background:#eee7dc;margin:28px 0}.flow{list-style:none;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:24px 0}.flow li{border-top:2px solid #a6684e;padding:16px 0}.step{color:#805344;font-size:.8rem;letter-spacing:.08em;font-weight:700}.flow strong{display:block;margin:6px 0}.route{padding-left:24px}.route>li{padding:6px 0 14px 10px}.route h3{margin:0 0 8px}.pieces{display:grid;grid-template-columns:1fr 1fr;gap:18px 30px}.pieces>div{border-top:1px solid #d8d0c2;padding-top:10px}details{border-block:1px solid #d8d0c2;padding:15px 0;margin-top:24px}summary{cursor:pointer;font-weight:600}footer{border-top:1px solid #d8d0c2;margin-top:40px;padding-top:16px;font-size:.85rem;color:#5f5d55}@media(max-width:650px){main{padding:30px 18px 50px}.flow,.pieces{grid-template-columns:1fr}.flow li{padding:10px 0}}@media print{body{background:white}main{max-width:none;padding:12px}a{color:inherit}.note{background:transparent}}
+</style>
+</head>
+<body><main>
+<header>
+<p class="eyebrow">Technical reference · source snapshot</p>
+<h1>Where one visible result comes from.</h1>
+<p>The local skincare guide combines a short self-reported consultation, source-backed education, an ingredient-label check and an optional YouCam cosmetic observation. These kinds of evidence stay separate. No cosmetic score or label comparison establishes diagnosis or product tolerance.</p>
+<p class="note"><strong>Reference route, not a completed learner tour.</strong> This map is prepared from the implemented code. It does not record learner practice, reflection or final readiness.</p>
+</header>
+<section aria-labelledby="flow-heading">
+<h2 id="flow-heading">Follow “Check this label”</h2>
+<p>After a supported consultation path, choose a catalog product and use the synthetic test input <code>Glycerin</code>. A documented overlap should appear as a caution. This example does not imply anyone has an allergy.</p>
+<ol class="flow" aria-label="One action through three code locations">
+<li><span class="step">01 · INPUT →</span><strong>The form calls the checker</strong><code>public/app.mjs</code><br>Submit reads the selected product and voluntary input.</li>
+<li><span class="step">02 · LOGIC →</span><strong>The label facts are compared</strong><code>checkLabel</code><br>Reviewed names resolve; unknown entries remain uncertain.</li>
+<li><span class="step">03 · RESULT</span><strong>The caution becomes visible</strong><code>renderResult</code><br>Text names the overlap and preserves the tolerance limit.</li>
+</ol>
+<ol class="route">
+<li><h3>Input: <a href="../public/app.mjs">public/app.mjs</a></h3><p>Search for <code>form.addEventListener('submit'</code>. The handler calls <code>checkLabel(currentProduct(), sensitivities.value, catalog)</code>. Changing an input invalidates the previous result.</p></li>
+<li><h3>Decision: <a href="../public/label-check.mjs">public/label-check.mjs</a></h3><p>Find <code>checkLabel</code> and <code>reviewedVocabulary</code>. The function uses reviewed identity/ingredient data and sourced aliases. It has no cosmetic-score or commission input and makes no server request.</p></li>
+<li><h3>Output: <a href="../public/app.mjs">public/app.mjs</a></h3><p>Find <code>renderResult</code> and <code>resultCopy</code>. They show documented overlaps, unresolved entries and qualified outcomes using text nodes. No overlap still cannot establish tolerance or suitability.</p></li>
+</ol>
+</section>
+<section aria-labelledby="pieces-heading">
+<h2 id="pieces-heading">The other pieces</h2>
+<div class="pieces">
+<div><h3>Consultation and care holds</h3><p><a href="../public/consultation-ui.mjs">consultation-ui.mjs</a> gathers answers and renders the guide. <code>evaluateConsultation</code> in <a href="../public/consultation.mjs">consultation.mjs</a> keeps emergency/review/unknown paths ahead of scan or product output. It does not infer disease from text or photos.</p></div>
+<div><h3>Reviewed public content</h3><p><a href="../public/guidance.json">guidance.json</a> holds educational text/sources. <a href="../public/catalog.json">catalog.json</a> holds two exact dated U.S. label snapshots. These static files contain no personal answers.</p></div>
+<div><h3>Optional observation</h3><p><code>initializeObservationUI</code> in <a href="../public/observation-ui.mjs">observation-ui.mjs</a> manages eligibility, consent and explicit modes. Fixture mode sends no photo. Live mode needs an authorized image and deliberate analysis action.</p></div>
+<div><h3>Local boundary → external service</h3><p><code>createAppServer</code> in <a href="../server.mjs">server.mjs</a> applies local request limits. <code>createYouCamAdapter</code> in <a href="../lib/youcam.mjs">lib/youcam.mjs</a> performs the authorized provider flow. The key stays server-side; sensitivities/context stay in browser memory.</p></div>
+</div>
+</section>
+<section aria-labelledby="change-heading">
+<h2 id="change-heading">To change this, start here</h2>
+<ul>
+<li><strong>Label wording:</strong> <code>resultCopy</code>/<code>renderResult</code> in <code>public/app.mjs</code>. Preserve uncertainty and tolerance limits.</li>
+<li><strong>Question flow/summary:</strong> <code>public/index.html</code> and <code>showQuestion</code>/<code>renderGuide</code> in <code>public/consultation-ui.mjs</code>.</li>
+<li><strong>Care behavior:</strong> <code>evaluateConsultation</code> and <code>test/consultation.test.mjs</code>. Consequential rule changes need appropriate evidence and review.</li>
+<li><strong>Product record:</strong> <code>public/catalog.json</code> and <code>test/label-check.test.mjs</code>. Review the exact variant/source before changing a snapshot.</li>
+</ul>
+</section>
+<section aria-labelledby="practice-heading">
+<h2 id="practice-heading">A practice to reuse</h2>
+<p>Turn a limit into a testable invariant. This project keeps cosmetic scores and commercial metadata outside label decisions. In <a href="../test/label-check.test.mjs">test/label-check.test.mjs</a>, find <code>cosmetic scores and commercial metadata cannot change a label check</code>. It varies those fields and verifies the same result. On another project, separate decision inputs first, then test that unrelated data cannot change the outcome.</p>
+<p>This is technical guidance from implemented evidence, not a learner reflection or statement of mastery. A small optional edit can be offered during the wrap-up; none is recorded as performed here.</p>
+</section>
+<details>
+<summary>Run, test and reopen this map</summary>
+<p>Use Node 24 in the repository. There are no runtime dependencies to install.</p>
+<p><code>YOUCAM_MODE=disabled npm start</code><br>Open <code>http://127.0.0.1:8787/</code> in the user's Mac browser. This explicit disabled mode accepts no photos.</p>
+<p><code>npm test</code> runs offline tests. The saved evidence reports 96 passing tests; preparing this map did not rerun them or make a provider call.</p>
+<p>Reopen <code>devpost/app-map.html</code> directly as a local file. It needs no server, JavaScript, CDN or network connection; source links refer to the local checkout.</p>
+</details>
+<footer><p>Release source snapshot: <a href="../RELEASE-MANIFEST.json">file hash manifest</a> · prepared October 26, 2026. Paths/symbols were checked against this implementation. Later changes can make the map drift; refresh affected pointers after shipping fixes. Browser rendering was mechanically checked after preparation; learner activity and final readiness remain unrecorded.</p></footer>
+</main></body></html>

@@ -1,0 +1,201 @@
+:root { color-scheme: light; --paper: #f8f6f0; --ink: #29312b; --muted: #696f65; --rule: #d6d7cb; --accent: #7c4c37; --soft: #eeeee4; }
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: "Avenir Next", Avenir, "Segoe UI", sans-serif; -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-underline-offset: 3px; }
+button, input, select, textarea { font: inherit; }
+button, summary { cursor: pointer; }
+button:disabled { cursor: not-allowed; }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible, summary:focus-visible, [tabindex]:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
+.shell { width: min(1040px, calc(100% - 80px)); margin: auto; }
+.site-header { min-height: 80px; display: flex; align-items: center; justify-content: space-between; gap: 25px; border-bottom: 1px solid var(--rule); }
+.wordmark { font-family: "Iowan Old Style", Baskerville, Georgia, serif; font-size: 32px; line-height: 1; text-decoration: none; letter-spacing: -1px; }
+.wordmark-dot { color: var(--accent); }
+.header-note { font-size: 12px; color: var(--muted); }
+.intro { display: flex; align-items: end; justify-content: space-between; gap: 40px; padding: 34px 0 30px; }
+h1 { margin: 0; font: 400 44px/1.04 "Iowan Old Style", Baskerville, Georgia, serif; letter-spacing: -1.7px; }
+h1 em { font-weight: 400; }
+.intro > p { max-width: 230px; color: var(--muted); font-size: 13px; line-height: 1.65; margin: 0 0 3px; }
+.workspace { border-top: 1px solid var(--ink); padding-top: 22px; scroll-margin-top: 20px; }
+.consultation-main { max-width: 680px; margin: 0 auto; min-width: 0; }
+.journey-progress { list-style: none; display: flex; justify-content: space-between; gap: 20px; margin: 0 0 38px; padding: 0 0 19px; border-bottom: 1px solid var(--rule); }
+.journey-progress li { color: var(--muted); font-size: 12px; }
+.journey-progress li span { font-size: 10px; margin-right: 8px; }
+.journey-progress [aria-current] { color: var(--ink); font-weight: 650; }
+.journey-progress [aria-current] span { color: var(--accent); }
+.question-meta { display: flex; justify-content: space-between; gap: 20px; color: var(--muted); font-size: 10px; letter-spacing: 1px; margin-bottom: 16px; }
+.question-meta > span:last-child { letter-spacing: 0; }
+.stage-title { font: 400 35px/1.15 "Iowan Old Style", Baskerville, Georgia, serif; letter-spacing: -.9px; margin: 0 0 27px; max-width: 620px; scroll-margin-top: 22px; }
+#context-form, #care-form { margin-top: 0; }
+[data-context-question] { min-height: 80px; }
+.question-helper { color: var(--muted); font-size: 13px; line-height: 1.65; margin: -10px 0 13px; }
+select { width: 100%; min-height: 54px; padding: 12px 35px 12px 15px; border: 1px solid #a9afa1; background: #fffdf8; color: var(--ink); border-radius: 0; font-size: 16px; }
+.routine-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.field-label { display: block; font-size: 13px; }
+.field-label select { display: block; margin-top: 9px; }
+textarea { display: block; width: 100%; padding: 14px 15px; min-height: 105px; background: #fffdf8; border: 1px solid #a9afa1; border-radius: 0; color: var(--ink); resize: vertical; line-height: 1.6; font-size: 16px; }
+textarea::placeholder { color: #777d71; }
+.form-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 24px; margin-top: 20px; }
+.wizard-actions { margin-top: 28px; }
+.primary-button { border: 1px solid var(--ink); border-radius: 0; background: var(--ink); color: #fffdf6; padding: 14px 19px; min-width: 190px; min-height: 49px; display: flex; align-items: center; justify-content: space-between; gap: 25px; font-size: 14px; font-weight: 550; }
+.primary-button:hover:not(:disabled) { background: #414b40; }
+.primary-button:disabled { opacity: .4; }
+.primary-button > span:last-child { font-size: 18px; font-weight: 400; }
+.text-button { border: 0; padding: 12px 0; min-height: 44px; background: transparent; color: var(--muted); font-size: 12px; text-decoration: underline; text-underline-offset: 4px; }
+.privacy-line { font-size: 11px; line-height: 1.65; color: var(--muted); margin: 25px 0 0; }
+fieldset { border: 0; padding: 0; margin: 0; min-width: 0; }
+.symptom-list { font-size: 15px; line-height: 1.75; margin: -8px 0 18px; max-width: 620px; }
+.urgent-note { color: #854632; font-size: 12px; line-height: 1.65; margin: 0 0 20px; }
+.answer-options { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.answer-options label { display: flex; align-items: center; gap: 10px; min-height: 50px; padding: 12px 15px; border: 1px solid var(--rule); font-size: 13px; cursor: pointer; }
+.answer-options label:has(input:checked) { border-color: var(--ink); background: var(--soft); }
+.answer-options label:focus-within { outline: 2px solid var(--accent); outline-offset: 3px; }
+.answer-options input { width: 16px; height: 16px; accent-color: var(--ink); margin: 0; }
+.section-heading { display: flex; justify-content: space-between; gap: 16px; align-items: center; margin: 0 0 15px; }
+.eyebrow { font-size: 10px; font-weight: 650; letter-spacing: 1.25px; margin: 0; color: var(--accent); }
+.section-heading > span { font-size: 11px; color: var(--muted); }
+h2 { font-size: 26px; font-weight: 500; letter-spacing: -.6px; line-height: 1.25; margin: 0; }
+.care-outcome { border-left: 3px solid var(--accent); padding: 18px 20px; background: var(--soft); margin: 0 0 22px; }
+.care-outcome h3 { font-size: 20px; font-weight: 550; line-height: 1.4; margin: 0 0 10px; }
+.care-outcome p { font-size: 14px; line-height: 1.75; margin: 0; }
+.care-outcome[data-route="emergency"] { border-left-color: #983e2f; background: #f1e5dd; }
+.care-outcome[data-route="supported"] { border: 0; padding: 0; background: transparent; color: var(--muted); }
+.education-item { padding: 18px 0; border-bottom: 1px solid var(--rule); }
+.education-heading { display: flex; align-items: baseline; gap: 16px; }
+.education-number { font-size: 10px; color: var(--accent); }
+.education-heading h3 { margin: 0; font-size: 17px; font-weight: 500; line-height: 1.5; letter-spacing: -.2px; }
+.education-detail { padding-left: 30px; }
+.education-detail summary { padding: 5px 0 0; font-size: 11px; }
+.education-detail p { font-size: 13px; color: var(--muted); line-height: 1.75; margin: 12px 0 0; }
+summary { display: flex; justify-content: space-between; align-items: center; gap: 12px; list-style: none; font-size: 12px; color: var(--muted); padding: 15px 0; }
+summary::-webkit-details-marker { display: none; }
+.disclosure-mark { font-size: 21px; line-height: 1; color: var(--ink); }
+details[open] > summary .disclosure-mark { transform: rotate(45deg); }
+.source-disclosure summary { padding-bottom: 0; font-size: 11px; }
+.source-disclosure summary::after, .education-detail summary::after { content: "+"; }
+.source-disclosure[open] summary::after, .education-detail[open] summary::after { content: "−"; }
+.supporting-detail { border-bottom: 1px solid var(--rule); }
+.supporting-detail > p, .about-guide > p { font-size: 12px; color: var(--muted); line-height: 1.75; margin: 0 0 14px; }
+.summary-context { margin-top: 18px; }
+.small-note { color: var(--muted); }
+.content-sources { display: flex; flex-wrap: wrap; gap: 8px 18px; margin: 12px 0 0; }
+.content-sources a { font-size: 11px; line-height: 1.6; }
+.panel { min-width: 0; }
+#product-panel { margin-top: 30px; padding-top: 26px; border-top: 1px solid var(--ink); }
+.section-description { font-size: 13px; line-height: 1.7; color: var(--muted); margin: 10px 0 20px; }
+.product-options { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--rule); }
+.product-option { display: block; position: relative; padding: 20px 18px 20px 0; border-bottom: 1px solid var(--rule); min-width: 0; cursor: pointer; }
+.product-option + .product-option { border-left: 1px solid var(--rule); padding-left: 22px; }
+.product-option.is-selected { box-shadow: inset 0 -3px var(--ink); }
+.product-option:hover { background: #efeee6; }
+.product-option:focus-within { outline: 2px solid var(--accent); outline-offset: 4px; z-index: 1; }
+.product-option input { position: absolute; width: 18px; height: 18px; top: 24px; right: 18px; opacity: 0; }
+.radio-visual { width: 16px; height: 16px; border: 1px solid #a9ab9f; border-radius: 50%; display: grid; place-items: center; position: absolute; top: 21px; right: 18px; }
+.is-selected .radio-visual { border-color: var(--ink); background: var(--ink); }
+.is-selected .radio-visual::after { content: ""; width: 5px; height: 5px; border-radius: 50%; background: var(--paper); }
+.product-text { display: block; min-width: 0; }
+.product-brand { display: block; font-size: 9px; letter-spacing: 1px; font-weight: 650; color: var(--muted); padding-right: 28px; margin-bottom: 13px; }
+.product-name { display: block; font: 400 28px/1.15 "Iowan Old Style", Baskerville, Georgia, serif; letter-spacing: -.6px; }
+.product-type { display: block; font-size: 13px; margin-top: 5px; }
+.product-variant { display: block; font-size: 11px; line-height: 1.6; color: var(--muted); margin-top: 10px; }
+.product-count { display: block; font-size: 10px; color: var(--muted); margin-top: 10px; }
+.label-reference { border-bottom: 1px solid var(--rule); }
+.source-strip { padding-bottom: 14px; }
+.source-strip a { font-size: 12px; }
+.source-strip p { font-size: 11px; color: var(--muted); line-height: 1.6; margin: 6px 0 0; }
+.label-snapshot-note { font-size: 12px; line-height: 1.7; color: var(--muted); margin: 0 0 12px; }
+.ingredient-list { padding: 0; margin: 0 0 18px; list-style: none; columns: 2; column-gap: 25px; }
+.ingredient-list li { break-inside: avoid; padding: 4px 0; border-bottom: 1px solid #e4e2d9; font-size: 12px; overflow-wrap: anywhere; }
+.check-result { margin-top: 25px; padding: 20px 22px; border-left: 3px solid var(--ink); background: var(--soft); }
+.check-result.result--empty { padding: 0; border: 0; background: transparent; }
+.result-eyebrow { font-size: 9px; line-height: 1.6; font-weight: 650; letter-spacing: 1px; margin: 0 0 10px; }
+.check-result h3 { font: 400 25px/1.2 "Iowan Old Style", Baskerville, Georgia, serif; letter-spacing: -.5px; margin: 0 0 10px; }
+.check-result p:not(.result-eyebrow) { font-size: 13px; line-height: 1.75; margin: 8px 0 0; }
+.check-result.result--empty p { color: var(--muted); font-size: 12px; }
+.result--caution { border-left-color: #9b5d2e; background: #f0e5d3; color: #70451f; }
+.result--insufficient { background: #eae7df; color: #5f5c4d; border-left-color: #82765b; }
+.result--no-overlap, .result--label-only { background: #eae9e0; color: #444b41; }
+.overlap-list, .unresolved-list { margin: 12px 0; padding-left: 18px; font-size: 13px; }
+.result-limit { border-top: 1px solid #79674a44; padding-top: 12px; font-weight: 550; }
+.uncertainty-heading { font-weight: 600; }
+.professional-note { margin-top: 26px; padding-top: 22px; border-top: 1px solid var(--rule); }
+.professional-note h3 { font-size: 14px; font-weight: 550; margin: 0 0 8px; }
+.professional-note p { font-size: 12px; line-height: 1.8; color: var(--muted); margin: 0 0 12px; }
+.summary-observation { padding-top: 4px; }
+.availability { font-size: 11px; color: var(--accent); display: block; margin: 0 0 7px; }
+.summary-actions { margin-top: 15px; justify-content: space-between; }
+.about-guide { margin-top: 42px; border-top: 1px solid var(--rule); }
+.about-guide > p { max-width: 680px; }
+.safety-links { display: flex; flex-wrap: wrap; gap: 15px 25px; margin: 0 0 18px; }
+.safety-links a { font-size: 11px; line-height: 1.6; }
+.site-footer { display: flex; justify-content: space-between; gap: 20px; padding: 23px 0 26px; font-size: 10px; line-height: 1.7; color: var(--muted); }
+.skip-link { position: absolute; top: -60px; left: 20px; padding: 12px; background: var(--ink); color: white; z-index: 2; }
+.skip-link:focus { top: 10px; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+.muted { color: var(--muted); font-size: 13px; }
+@media(max-width:700px) {
+  .shell { width: calc(100% - 40px); }
+  .site-header { min-height: 68px; }
+  .wordmark { font-size: 29px; }
+  .header-note { font-size: 10px; }
+  .intro { padding: 27px 0 25px; display: block; }
+  h1 { font-size: 38px; letter-spacing: -1.4px; }
+  .intro > p { max-width: none; margin-top: 16px; font-size: 12px; }
+  .journey-progress { margin-bottom: 30px; gap: 10px; }
+  .journey-progress li { font-size: 11px; }
+  .journey-progress li span { margin-right: 4px; font-size: 9px; }
+  .stage-title { font-size: 31px; margin-bottom: 24px; }
+  .symptom-list { font-size: 14px; }
+  .product-option { padding-right: 12px; }
+  .product-option + .product-option { padding-left: 16px; }
+  .radio-visual { right: 12px; }
+  .product-name { font-size: 26px; }
+  .product-type { font-size: 12px; }
+  .section-heading > span { max-width: 110px; text-align: right; line-height: 1.6; }
+}
+@media(max-width:390px) {
+  .shell { width: calc(100% - 32px); }
+  .header-note { max-width: 100px; text-align: right; line-height: 1.6; }
+  .routine-fields { gap: 12px; }
+  .answer-options label { padding: 11px; font-size: 12px; }
+  .product-name { font-size: 24px; }
+  .product-brand { font-size: 8px; }
+  .product-variant { font-size: 10px; }
+  .form-actions { gap: 18px; }
+  .primary-button { min-width: 174px; }
+  .site-footer { display: block; }
+  .site-footer span { display: block; }
+}
+@media(prefers-reduced-motion:reduce) { * { scroll-behavior: auto !important; transition: none !important; } }
+
+/* Optional observation stays separate from care and label decisions. */
+.observation-panel { border-top: 1px solid var(--ink); margin-top: 28px; padding-top: 22px; }
+.observation-panel > details > summary { font: 400 25px/1.3 "Iowan Old Style", Baskerville, Georgia, serif; letter-spacing: -.5px; padding: 0 0 17px; color: var(--ink); }
+.observation-mode { max-width: none !important; }
+.observation-note, .observation-file-help, .observation-status, #observation-photo-meta { font-size: 12px; line-height: 1.75; color: var(--muted); margin: 0 0 16px; }
+.observation-file-help { margin-top: 9px; }
+#observation-file { display: block; max-width: 100%; font-size: 13px; margin-top: 10px; color: var(--ink); }
+#observation-file::file-selector-button { border: 1px solid var(--rule); padding: 10px 14px; margin-right: 12px; border-radius: 0; background: var(--soft); color: var(--ink); cursor: pointer; }
+#observation-preview { margin: 20px 0; }
+#observation-preview-image { display: block; width: auto; max-width: min(100%, 280px); max-height: 260px; object-fit: contain; background: var(--soft); }
+#observation-photo-meta { margin-top: 8px; font-size: 11px; }
+.observation-consent { border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); padding: 15px 0; }
+.observation-consent p { font-size: 12px; line-height: 1.75; margin: 0 0 14px; color: var(--muted); }
+.observation-consent label { display: flex; align-items: flex-start; gap: 11px; font-size: 13px; line-height: 1.7; cursor: pointer; }
+.observation-consent input { flex: 0 0 auto; width: 17px; height: 17px; margin: 3px 0 0; accent-color: var(--ink); }
+.observation-consent a { display: inline-block; margin-top: 11px; font-size: 11px; }
+.observation-status:empty { display: none; }
+.observation-status { margin: 20px 0 0; }
+.observation-result { background: var(--soft); border-left: 3px solid var(--accent); padding: 20px 22px; margin-top: 20px; }
+.observation-result h3 { font-size: 15px; line-height: 1.5; font-weight: 500; margin: 0; }
+.observation-score { font: 400 48px/1.15 "Iowan Old Style", Baskerville, Georgia, serif; letter-spacing: -1px; margin: 7px 0 12px; }
+.observation-score-limit, .observation-result details p { font-size: 12px; line-height: 1.75; color: var(--muted); margin: 0; }
+.fixture-label { font-size: 11px; line-height: 1.7; color: #854632; font-weight: 650; margin: 0 0 15px; }
+.observation-result .fixture-label { border-bottom: 1px solid #c4bbac; padding-bottom: 11px; }
+.observation-actions { margin-top: 10px; }
+@media(max-width:480px) {
+  .observation-panel .section-heading { align-items: start; }
+  .observation-panel .eyebrow { max-width: 140px; font-size: 9px; line-height: 1.7; }
+  .observation-mode { max-width: 120px !important; font-size: 10px !important; }
+}

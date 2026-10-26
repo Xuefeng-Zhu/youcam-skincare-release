@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A simple, source-backed guide to dry-feeling skin and product labels.">
+  <title>Skincare — your next step</title>
+  <link rel="stylesheet" href="/styles.css"><script type="module" src="/app.mjs"></script>
+</head>
+<body>
+  <a class="skip-link" href="#workspace">Skip to your consultation</a>
+  <header class="site-header shell">
+    <a class="wordmark" href="/" aria-label="Skincare home">Skincare<span class="wordmark-dot">.</span></a>
+    <span class="header-note">No account · No saved history</span>
+  </header>
+  <main class="shell">
+    <section class="intro" aria-labelledby="page-title">
+      <h1 id="page-title">A little clarity<br><em>for your skin.</em></h1>
+      <p>One question at a time. For adults with dry-feeling skin.</p>
+    </section>
+    <div class="workspace consultation-workspace" id="workspace">
+      <div class="consultation-main">
+        <ol class="journey-progress" aria-label="Consultation steps">
+          <li data-progress="context" aria-current="step"><span>01</span> About you</li>
+          <li data-progress="care"><span>02</span> Care check</li>
+          <li data-progress="summary"><span>03</span> Next step</li>
+        </ol>
+        <section data-stage="context" aria-labelledby="context-title">
+          <div class="question-meta"><span>ABOUT YOU</span><span id="context-counter">1 of 5</span></div>
+          <h2 id="context-title" class="stage-title" tabindex="-1">What would you like help with?</h2>
+          <form id="context-form" novalidate>
+            <div data-context-question data-question-title="What would you like help with?">
+              <label class="sr-only" for="concern">Your concern</label>
+              <select id="concern" name="concern"><option value="dry-feeling">Dry-feeling skin</option><option value="other">Something else</option></select>
+            </div>
+            <div data-context-question data-question-title="How long have you noticed it?" hidden>
+              <label class="sr-only" for="duration">How long have you noticed it?</label>
+              <select id="duration" name="duration"><option value="">Skip this question</option><option value="recent">A few days</option><option value="weeks">A few weeks</option><option value="months">Longer than a month</option><option value="unsure">Not sure</option></select>
+            </div>
+            <div data-context-question data-question-title="Changed any products or routines lately?" hidden>
+              <label class="sr-only" for="recent-change">Recent product or routine changes</label>
+              <select id="recent-change" name="recentChange"><option value="">Skip this question</option><option value="yes">Yes</option><option value="no">No</option><option value="unsure">Not sure</option></select>
+            </div>
+            <div data-context-question data-question-title="What’s in your daily routine?" hidden>
+              <div class="routine-fields">
+                <label class="field-label" for="cleanser">Cleanser<select id="cleanser" name="cleanser"><option value="">Skip</option><option value="yes">Yes</option><option value="no">No</option><option value="unsure">Not sure</option></select></label>
+                <label class="field-label" for="moisturizer">Moisturizer<select id="moisturizer" name="moisturizer"><option value="">Skip</option><option value="yes">Yes</option><option value="no">No</option><option value="unsure">Not sure</option></select></label>
+              </div>
+            </div>
+            <div data-context-question data-question-title="Any known ingredient sensitivities?" hidden>
+              <label class="sr-only" for="sensitivities">Known ingredient sensitivities</label>
+              <p class="question-helper" id="input-help">Optional. Ingredients you already react to, one per line.</p>
+              <textarea id="sensitivities" name="sensitivities" rows="3" maxlength="2000" autocomplete="off" autocapitalize="off" spellcheck="false" aria-describedby="input-help" placeholder="Leave blank if unknown"></textarea>
+            </div>
+            <div class="form-actions wizard-actions">
+              <button type="submit" class="primary-button" id="context-next">Continue <span aria-hidden="true">→</span></button>
+              <button type="button" class="text-button" id="context-back" hidden>Back</button>
+            </div>
+          </form>
+          <p class="privacy-line">Answers stay here. Clear or reload to remove them.</p>
+        </section>
+        <section data-stage="care" hidden aria-labelledby="care-title">
+          <div class="question-meta"><span>CARE CHECK</span><span id="care-counter">1 of 3</span></div>
+          <h2 id="care-title" class="stage-title" tabindex="-1">Any immediate warning signs?</h2>
+          <form id="care-form" novalidate>
+            <fieldset class="care-question" data-care-question data-question-title="Any immediate warning signs?">
+              <legend class="sr-only">Any immediate warning signs?</legend>
+              <p class="symptom-list">Trouble breathing or swallowing, or new or sudden swelling around your eyes or of your lips, mouth, tongue, or throat?</p>
+              <p class="urgent-note">For an emergency, use your local emergency number now.</p>
+              <div class="answer-options">
+                <label><input type="radio" name="emergency" value="yes"><span>Yes</span></label><label><input type="radio" name="emergency" value="no"><span>No</span></label><label><input type="radio" name="emergency" value="unsure"><span>Not sure</span></label><label><input type="radio" name="emergency" value="declined"><span>Prefer not to answer</span></label>
+              </div>
+            </fieldset>
+            <fieldset class="care-question" data-care-question data-question-title="Any concerning rash signs?" hidden>
+              <legend class="sr-only">Any concerning rash signs?</legend>
+              <p class="symptom-list">A rash covering most of your body, blisters or open/raw skin, rapid spread, pain, fever or feeling ill with a rash, or a rash involving eyes, lips, mouth, or genital skin?</p>
+              <div class="answer-options">
+                <label><input type="radio" name="rash" value="yes"><span>Yes</span></label><label><input type="radio" name="rash" value="no"><span>No</span></label><label><input type="radio" name="rash" value="unsure"><span>Not sure</span></label><label><input type="radio" name="rash" value="declined"><span>Prefer not to answer</span></label>
+              </div>
+            </fieldset>
+            <fieldset class="care-question" data-care-question data-question-title="Is it persisting or reacting to products?" hidden>
+              <legend class="sr-only">Is it persisting or reacting to products?</legend>
+              <p class="symptom-list">Dryness continuing despite basic gentle care, or products causing burning, stinging, or irritation?</p>
+              <div class="answer-options">
+                <label><input type="radio" name="persistentOrReactive" value="yes"><span>Yes</span></label><label><input type="radio" name="persistentOrReactive" value="no"><span>No</span></label><label><input type="radio" name="persistentOrReactive" value="unsure"><span>Not sure</span></label><label><input type="radio" name="persistentOrReactive" value="declined"><span>Prefer not to answer</span></label>
+              </div>
+            </fieldset>
+            <div class="form-actions wizard-actions"><button class="primary-button" type="submit" id="care-next">Continue <span aria-hidden="true">→</span></button><button class="text-button" type="button" id="care-back">Back</button></div>
+          </form>
+          <p class="privacy-line">Not a diagnosis or a complete warning-sign check. You can leave an answer unknown.</p>
+        </section>
+        <section data-stage="summary" hidden aria-labelledby="summary-title">
+          <div class="section-heading"><p class="eyebrow">YOUR NEXT STEP</p><button type="button" class="text-button" data-action="edit-answers">Edit answers</button></div>
+          <h2 id="summary-title" class="stage-title" tabindex="-1">Keep it simple.</h2>
+          <section id="care-outcome" class="care-outcome" role="status" aria-live="polite"></section>
+          <section id="education-section" class="education-section" aria-labelledby="education-title"><h3 id="education-title" class="sr-only">General care considerations</h3><div id="education-list"></div></section>
+          <details class="summary-context supporting-detail"><summary>Your answers &amp; guide limits <span class="disclosure-mark" aria-hidden="true">+</span></summary><p id="reported-context"></p><p class="small-note">Your answers are context, not proof of a cause. This guide cannot establish skin health or product tolerance.</p></details>
+          <section id="product-panel" class="panel product-panel" hidden aria-labelledby="product-title">
+            <div class="section-heading"><p class="eyebrow">OPTIONAL LABEL CHECK</p><span>Two reviewed examples</span></div>
+            <h2 id="product-title">Considering a moisturizer?</h2>
+            <p class="section-description">Compare a label with your known sensitivities. This cannot predict tolerance.</p>
+            <form id="label-form" novalidate>
+              <fieldset class="product-fieldset"><legend class="sr-only">Choose a catalog product</legend><div class="product-options" id="product-options"><p class="muted">Loading reviewed labels…</p></div></fieldset>
+              <div class="label-reference">
+                <details class="ingredient-details" id="ingredient-details">
+                  <summary><span id="ingredient-summary">Ingredients &amp; source</span><span class="disclosure-mark" aria-hidden="true">+</span></summary>
+                  <div class="source-strip" id="source-strip" hidden><a id="label-source" target="_blank" rel="noopener noreferrer">Manufacturer source ↗</a><p id="source-meta"></p></div>
+                  <p class="label-snapshot-note">Dated U.S. web label. Compare your actual package; formulations may differ.</p>
+                  <ul class="ingredient-list" id="ingredient-list" aria-label="Documented ingredients"></ul>
+                </details>
+              </div>
+              <div class="form-actions"><button class="primary-button" type="submit" id="check-button" disabled>Check this label <span aria-hidden="true">→</span></button><button class="text-button" type="button" id="clear-inputs">Clear sensitivities</button></div>
+            </form>
+            <section id="check-result" class="check-result result--empty" role="status" aria-live="polite" aria-atomic="true" tabindex="-1"><p class="empty-result">Choose a product to check its label.</p></section>
+          </section>
+          <section class="professional-note"><h3>When to seek care</h3><p>Persistent or worsening dryness, or products that burn, sting, or irritate: speak with a qualified clinician. Breathing/swallowing difficulty or sudden swelling: seek immediate help.</p></section>
+          <section class="observation-panel" id="observation-panel" hidden aria-labelledby="observation-title">
+            <div class="section-heading"><p class="eyebrow">OPTIONAL COSMETIC OBSERVATION</p><span class="observation-mode" id="observation-mode">Checking availability</span></div>
+            <details id="observation-details">
+              <summary><span id="observation-title">Add a texture observation</span><span class="disclosure-mark" aria-hidden="true">+</span></summary>
+              <p class="observation-note" id="observation-note">Checking availability. No photo has been sent.</p>
+              <div id="observation-disabled"><button class="primary-button" type="button" disabled>Observation unavailable</button></div>
+              <div id="observation-fixture" hidden>
+                <p class="fixture-label">Simulated fixture · Not an analysis of your skin</p>
+                <button class="primary-button" id="observation-show-fixture" type="button">View simulated result</button>
+              </div>
+              <form id="observation-form" hidden novalidate>
+                <label class="field-label" for="observation-file">Choose a photo</label>
+                <input id="observation-file" type="file" accept="image/jpeg,image/png" aria-describedby="observation-file-help">
+                <p class="observation-file-help" id="observation-file-help">JPEG or PNG, up to 8 MB; at least 480 px on the shorter side. Choosing a file does not send it.</p>
+                <div id="observation-preview" hidden><img id="observation-preview-image" alt="Local preview of your selected photo"><p id="observation-photo-meta"></p></div>
+                <div class="observation-consent">
+                  <p id="observation-retention">If you select Analyze, YouCam processes this photo. YouCam may retain data for up to 30 days; analysis results are available for 24 hours. Clearing here stops local waiting and forgets the local reference; it does not cancel provider processing or delete data already sent.</p>
+                  <label><input id="observation-consent" type="checkbox" aria-describedby="observation-retention"><span>I agree to send this photo to YouCam and confirm I have the rights and consent of anyone pictured.</span></label>
+                  <a href="https://www.makeupar.com/perfectbeauty/youcam/terms-of-service-api" target="_blank" rel="noopener noreferrer">YouCam API terms ↗</a>
+                </div>
+                <div class="form-actions"><button class="primary-button" id="observation-analyze" type="submit" disabled>Analyze photo <span aria-hidden="true">→</span></button></div>
+              </form>
+              <p id="observation-status" class="observation-status" role="status" aria-live="polite" aria-atomic="true"></p>
+              <section id="observation-result" class="observation-result" hidden tabindex="-1" aria-label="Cosmetic observation result"></section>
+              <div class="form-actions observation-actions"><button class="text-button" id="observation-resume" type="button" hidden>Check existing analysis</button><button class="text-button" id="observation-clear" type="button" hidden>Clear observation</button></div>
+            </details>
+          </section>
+          <div class="form-actions summary-actions"><button class="text-button" type="button" data-action="reset">Clear and start again</button><button class="text-button" type="button" data-action="edit-care">Review care answers</button></div>
+        </section>
+      </div>
+    </div>
+    <details class="about-guide" id="about-guide"><summary>About this guide &amp; sources <span class="disclosure-mark" aria-hidden="true">+</span></summary><p>Educational guidance for adults with dry-feeling skin. It does not diagnose, prescribe, or establish that a product will suit you. No cosmetic score or ingredient list can establish tolerance.</p><div class="safety-links"><a href="https://www.aad.org/public/everyday-care/skin-care-basics/dry/dermatologists-tips-relieve-dry-skin" target="_blank" rel="noopener noreferrer">AAD · Dry skin ↗</a><a href="https://www.fda.gov/cosmetics/cosmetic-ingredients/allergens-cosmetics" target="_blank" rel="noopener noreferrer">FDA · Cosmetic allergies ↗</a></div></details>
+    <footer class="site-footer"><span>Skincare / Less guesswork.</span><span>No saved personal history.</span></footer>
+  </main>
+</body>
+</html>
