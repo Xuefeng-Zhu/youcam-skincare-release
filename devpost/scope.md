@@ -7,7 +7,7 @@ approval-date: 2026-10-26
 prior-approval-date: 2026-10-26
 ---
 
-# Skincare Guide — Consultation Scope Revision
+# Skinny — Consultation Scope Revision
 
 A guided, consultation-like skincare experience that helps someone organize a cosmetic concern, understand the limits of a genuine skin observation, and consider sensible next steps and documented product information.
 

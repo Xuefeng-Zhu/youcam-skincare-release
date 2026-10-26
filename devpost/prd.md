@@ -8,11 +8,11 @@ revision-handling: internal-detail-within-approved-journey
 prior-approval-date: 2026-10-26
 ---
 
-# Skincare Prototype — Product Requirements
+# Skinny — Product Requirements
 
 **Approved journey and recorded implementation details.** The consultation flow and dry-feeling-skin focus were approved on October 26, 2026. [The implementation record](consultation-delta.md) documents conservative care/unknown, educational/catalog and affected-order details within that flow. The existing checker, design, browser/Node architecture, privacy boundaries and fast mode remain in place.
 
-Source: `scope.md > The Unique Kernel`, `The Core Loop`, `The POC Boundary`. The final project name remains learner-owned.
+Source: `scope.md > The Unique Kernel`, `The Core Loop`, `The POC Boundary`. The learner chose the project name **Skinny** on October 26, 2026.
 
 ## The Core Journey
 
@@ -106,7 +106,7 @@ Clinical scoring/diagnosis, treatment selection, numerical fit/safety percentage
 
 - **Next checkpoint:** meaningful early hands-on feedback on the running consultation. Journey/first concern/design/stack/fast mode are settled; no duplicate planning approval.
 - **Before live integration:** authorized existing provider access/units and a lawful informed-consent test image; no new signup/credentials or transmission implied.
-- **Before submission:** learner-authored final name/fields/survey/reflection, publication/license decision, working demonstration and final hands-on review.
+- **Before submission:** learner-authored required fields/survey/reflection, publication/license decision, working demonstration and final hands-on review.
 
 ## Prior Approval Record
 

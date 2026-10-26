@@ -30,8 +30,8 @@
     },
     {
       "path": "README.md",
-      "sha256": "467ee25fbcc643b88db6ca036fe96d0df6945b098a3fc0b74628e754a49d03a1",
-      "bytes": 4676
+      "sha256": "db1af5601ebb155910c9e262568af289128421b43ff2520d79a6c95d4f00eb7e",
+      "bytes": 4745
     },
     {
       "path": "devpost/app-map.html",
@@ -60,8 +60,8 @@
     },
     {
       "path": "devpost/prd.md",
-      "sha256": "a015152bf64752fbba8b47424cf7dae2faa1382e27414104dc402e3f201d8642",
-      "bytes": 12249
+      "sha256": "83b765b8e7b56909a5a7b2dbc50869877ebe137a0a5a4bcdcb4c02de3d9ec862",
+      "bytes": 12256
     },
     {
       "path": "devpost/product-evidence.md",
@@ -75,8 +75,8 @@
     },
     {
       "path": "devpost/scope.md",
-      "sha256": "66f81c43e420a39cab597f0e2103f3603c5648f1c19a29e124e5414f0ae246ec",
-      "bytes": 6944
+      "sha256": "f75896ec2b9d0184b01911842683b23b5320e630efbf98b2b34e7d72f89797b3",
+      "bytes": 6936
     },
     {
       "path": "devpost/spec.md",
@@ -130,8 +130,8 @@
     },
     {
       "path": "public/index.html",
-      "sha256": "1ddd4ce256b09cfdbd73c41d16b0691d9067cb27299c7daae0a63db3039e7097",
-      "bytes": 15619
+      "sha256": "033b56d85b488c4e66f5b009fe3456d0880bea8d62abdf8620e8a12836a9bfb4",
+      "bytes": 15611
     },
     {
       "path": "public/label-check.mjs",
@@ -173,5 +173,6 @@
       "sha256": "15ec4bc465b21731798ae6836a490992e5989059fdac2de8d7868fe4b933a7c5",
       "bytes": 14218
     }
-  ]
+  ],
+  "project_name": "Skinny"
 }

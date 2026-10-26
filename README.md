@@ -1,6 +1,8 @@
-# Technical setup
+# Skinny
 
-This clean release tree contains the local browser/Node application, approved technical plans, source attributions and factual verification evidence. Original application code is licensed under [MIT](LICENSE). This technical label is not a learner-selected contest name or submission description.
+Technical setup and verification.
+
+This clean release tree contains the local browser/Node application, approved technical plans, source attributions and factual verification evidence. Original application code is licensed under [MIT](LICENSE). Skinny is the learner-selected project name. This page contains technical documentation, not learner-authored submission answers.
 
 ## Run locally
 
