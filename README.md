@@ -33,7 +33,7 @@ The first track is dry-feeling skin. Structured care answers can hold scan/produ
 ## Plans, sources and evidence
 
 - [Approved scope](devpost/scope.md), [PRD](devpost/prd.md), [technical spec](devpost/spec.md) and [build checklist](devpost/checklist.md)
-- [Offline application map](devpost/app-map.html), a reference route rather than a completed learner activity
+- [Offline application map](devpost/app-map.html), source-checked and browser-rendered alongside the project-grounded recap
 - [Consultation journey](devpost/consultation-journey.md) and [source-reviewed implementation rules](devpost/consultation-delta.md)
 - [Product evidence](devpost/product-evidence.md) and [two exact catalog snapshots](devpost/catalog-evidence.md)
 - [Verification results and limits](devpost/verification.md) and [one real provider acceptance](devpost/provider-integration.md)
@@ -41,7 +41,7 @@ The first track is dry-feeling skin. Structured care answers can hold scan/produ
 
 One specifically authorized official provider-sample analysis returned cosmetic texture uiScore 74, using nine existing free units and $0 paid spending. That limited result is separate from offline simulation and is not clinical validation or blanket permission to repeat analyses. No provider image, private footage, credential, account/task identifier or personal input is included here.
 
-Final learner retry/readiness and the learning wrap-up remain unconfirmed. A video is being reviewed separately; no public video URL or submitted entry is claimed. The release omits the private recording/Remotion toolchain and all development history. Publication of this code does not complete learner review or a Devpost submission.
+The learner confirmed the current app ready after the walkthrough, and a brief code-map recap connected their feedback to the separation of label checks, cosmetic observation and care warnings. The full-frame narrated video is complete and verified; public-video access and formal submission are tracked separately, and no submitted entry is claimed here. The release omits the private recording/Remotion toolchain and all development history. Publication of this code does not complete learner review or a Devpost submission.
 
 ## Sources and rights
 

@@ -10,7 +10,8 @@
     "private_path_and_asset_exclusions": "passed",
     "independent_read_only_review": "passed",
     "development_application_sources": "unchanged",
-    "final_learner_readiness": "not confirmed"
+    "final_learner_readiness": "confirmed after walkthrough on 2026-10-26",
+    "learning_closeout": "project-grounded recap shared; optional code edit/reflection not performed"
   },
   "files": [
     {
@@ -30,13 +31,13 @@
     },
     {
       "path": "README.md",
-      "sha256": "db1af5601ebb155910c9e262568af289128421b43ff2520d79a6c95d4f00eb7e",
-      "bytes": 4745
+      "sha256": "7f629412212ca59ed5ec4f20c2399bfef2f74d43bb4c10b5011e0145cd7d90c2",
+      "bytes": 4951
     },
     {
       "path": "devpost/app-map.html",
-      "sha256": "40ffdbdbc30a6ec1d298b63bd9ab97cc4e9ab96991e048fea7150c8342ccc8b5",
-      "bytes": 8676
+      "sha256": "8bf64b37a3228ce4a09ad9f614fca37b03a457761d928a94529080d2b59ad9a6",
+      "bytes": 8860
     },
     {
       "path": "devpost/catalog-evidence.md",
@@ -45,8 +46,8 @@
     },
     {
       "path": "devpost/checklist.md",
-      "sha256": "cc47ff013c5de35c086210807f0c5e81d434ad0c65d7d0e755717efd089599a3",
-      "bytes": 10373
+      "sha256": "998b84dd737b8f4469bbd63631b64462e1a99622fc385ab9d968e046d69284ca",
+      "bytes": 10591
     },
     {
       "path": "devpost/consultation-delta.md",
@@ -70,8 +71,8 @@
     },
     {
       "path": "devpost/provider-integration.md",
-      "sha256": "88926869740ecffa055d1cda7256b9a7245bc4fa7952b0afc0491e8d1053eee8",
-      "bytes": 2825
+      "sha256": "be88c8a549901a887b127d06f69a7f717f7995f6b17e3fb3a99f9bb3dc6e7ccc",
+      "bytes": 2908
     },
     {
       "path": "devpost/scope.md",
@@ -85,8 +86,8 @@
     },
     {
       "path": "devpost/verification.md",
-      "sha256": "079b30ea781bb264a663bb34e0d045baf749c361fcee0cf5d63c310adddfee38",
-      "bytes": 3086
+      "sha256": "2b0d7d9c635577b968de336bab76d97fadb63484c295930557f9241407b20c7a",
+      "bytes": 3329
     },
     {
       "path": "lib/request-policy.mjs",

@@ -27,6 +27,6 @@ Fixture mode was visibly simulated with no photo picker/upload. An isolated fake
 
 ## Remaining boundaries
 
-Actual early feedback was received and addressed. Final learner retry/readiness, the learning activity/recap and showing the prepared [app map](app-map.html) are not recorded as completed. Public video hosting, production/deployment, full accessibility/physical-device validation and formal submission are not claimed.
+Actual early feedback was received and addressed. The learner explicitly confirmed current-app readiness after the walkthrough. A project-grounded recap connected the actual consultation/nondiagnostic feedback to the separation of label checking, cosmetic observation and care warnings. The prepared [app map](app-map.html) was source-checked and browser-rendered; no code exercise, optional edit or personal reflection is claimed. Public video hosting, production/deployment, full accessibility/physical-device validation and formal submission are not claimed.
 
 This release includes code and source-backed technical evidence, not private feedback records, local capture paths, narration or learner-owned contest fields.

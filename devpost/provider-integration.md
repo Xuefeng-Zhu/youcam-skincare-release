@@ -22,4 +22,4 @@ The notice distinguishes 24-hour result availability from general provider reten
 
 ## Limits and remaining review
 
-[Verification](verification.md) records 96 offline tests and actual browser checks, separately from this one real result. Final learner retry/readiness and the learning wrap-up remain incomplete. Video review/public hosting and submission are separate work; no public URL or completed entry is claimed here.
+[Verification](verification.md) records 96 offline tests and actual browser checks, separately from this one real result. The learner confirmed the current app ready after the walkthrough and received a project-grounded code-map recap. The full-frame narrated video is complete and verified. Public hosting and submission are separate work; no public URL or completed entry is claimed here.
